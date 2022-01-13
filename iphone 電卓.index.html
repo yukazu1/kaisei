@@ -1,0 +1,135 @@
+<script>
+//ソースコードを見てくれてありがとう by 海成
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+
+<style id="webmakerstyle">
+
+</style>
+
+
+</head>
+<body>
+<title > 海成のための電卓</title>
+<body bgcolor=black>
+<style >
+  button
+  {
+       width: 100px;
+       height: 100px; 
+       border-radius: 50%;
+       border: none;
+       font-size:300%;
+  }
+</style>
+
+  <div> <font color="white">計算ができない海成のための電卓<div></font>
+  <input style="font-size: 70px;width:420px; color:white;text-align: right;background:black;border: none" /><br />
+  <script>
+    function update( _v ) // input tag　を更新する関数
+    {
+      document. querySelector( 'input' ).value = _v
+    }
+    
+    
+    function append ( _v)//数字ボタンが押されたので数字を後ろに追加する
+    {
+      document. querySelector( 'input' ). value += _v
+    }
+
+    function  calc() // 「＝」が押されたので計算する
+    {
+      const v = document. querySelector( 'input' ).value
+      try{
+        const f = new Function( 'return ' + v )
+        update( f().toString() )
+        } catch( _error ){}
+          
+        
+    }
+
+    </script>
+  <button onclick="update ( '' )" style="background:white;">C </button>
+
+                                                 <button onclick="append( '**' )"style="background:white;">^</button>
+<button onclick="append( '**0.5' )"style="background:white;">√</button>
+<button onclick="append( '/' )"style="color:white;background:#ffa500;">÷</button><br />
+<button onclick="append( '7' )"style="color:white;background:gray;">7</button>
+<button onclick="append( '8' )"style="color:white;background:gray;">8</button>
+<button onclick="append( '9' )"style="color:white;background:gray;">9</button>
+<button onclick="append( '*' )"style="color:white;background:#ffa500;">×</button><br />
+<button onclick="append( '4' )"style="color:white;background:gray;">4</button>
+<button onclick="append( '5' )"style="color:white;background:gray;">5</button>
+<button onclick="append( '6' )"style="color:white;background:gray;">6</button>
+<button onclick="append( '-' )"style="color:white;background:#ffa500;"> -</button><br />
+<button onclick="append( '1' )"style="color:white;background:gray;">1</button>
+<button onclick="append( '2' )"style="color:white;background:gray;">2</button>
+<button onclick="append( '3' )"style="color:white;background:gray;">3</button>
+<button onclick="append( '+' )"style="color:white;background:#ffa500;">+</button><br />
+<button onclick="append( '0' )"style="color:white;background:gray;">0</button>
+<button onclick="append( '00' )"style="color:white;background:gray;">00</button>
+<button onclick="append( '.' )"style="color:white;background:gray;">.</button>
+<button onclick="calc( '' )"style="color:white;background:#ffa500;"> =</button><br />
+
+
+
+  
+  
+  
+   
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="filesystem:https://webmaker.app/temporary/script.js">
+</script>
+</body>
+</html>
